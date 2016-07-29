@@ -6,6 +6,7 @@ import { provideRouter } from '@angular/router';
 import { Routes } from './app/routes.routes';
 
 if (environment.production) {
+  console.log('hi')
   enableProdMode();
 }
 

@@ -7,11 +7,27 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'jquery': 'vendor/jquery',
+  'bootstrap': 'vendor/bootstrap/dist/js/bootstrap.js'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'jquery': {
+    format: 'global',
+    defaultExtension: 'js',
+    main: 'dist/jquery'
+  },
+  'bootstrap': {
+    format: 'global',
+  }
 };
+
+const meta: any = {
+  'bootstrap': {
+    deps: ['jquery']
+  }
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
