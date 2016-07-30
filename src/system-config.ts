@@ -74,5 +74,9 @@ System.config({
   packages: cliSystemConfigPackages
 });
 
+System.config({
+  baseURL: '/js'
+});
+
 // Apply the user's configuration.
 System.config({ map, packages });
