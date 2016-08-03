@@ -1,0 +1,19 @@
+<div class="signup-form">
+  <p class="header-text">Sign up to be a <span>beta test pilot</span> in Fall 2016!</p>
+  <div class="form-container">
+    <form [formGroup]="emailForm">
+      <fieldset>
+        <input id="email" name="email" formControlName="email" (focus)="checkingEmail=false && invalidEmail=true" (keydown)="validateEmail($event)" (blur)="validateEmail(null)" type="text" autocomplete="off" required />
+        <label for="email">Enter your email</label>
+      </fieldset>
+      <p class="error" *ngIf="emailForm.controls.email.dirty && checkingEmail===true && invalidEmail===true">Please enter a valid email</p>
+      <div class="submit-container">
+        <a *ngIf="!emailForm.controls.email.errors" routerLink="/choose-your-aircraft">
+          <button class="submit-email-button valid-submit" type="submit">Sign up to be a test-pilot</button>
+        </a>
+        <button class="submit-email-button" *ngIf="emailForm.controls.email.errors" [disabled]="emailForm.controls.email.errors" type="submit">Sign up to be a test-pilot</button>
+      </div>
+    </form>
+  </div>
+  <p class="gray-text">We will only contact you with information about AirshipCMS and we never share it with anyone.</p>
+</div>

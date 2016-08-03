@@ -1,0 +1,13 @@
+<app-root>Loading..</app-root>
+
+<script src="/assets/scripts/vendor/es6-shim/es6-shim.js"></script>
+<script src="/assets/scripts/Reflect.js"></script>
+<script src="/assets/scripts/vendor/zone.js/dist/zone.js"></script>
+<script src="/assets/scripts/vendor/systemjs/dist/system.src.js"></script>
+
+<script>
+  System.import('/assets/scripts/system-config.js').then(function () {
+    System.import('main');
+  }).catch(console.error.bind(console));
+</script>
+

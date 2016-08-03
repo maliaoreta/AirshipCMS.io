@@ -1,0 +1,13 @@
+.topbar-logo {
+  padding-top: 4em;
+  padding-bottom: 3em;
+  margin: auto;
+  width: 290px; }
+  .topbar-logo img {
+    width: 100%; }
+  @media (min-width: 768px) {
+    .topbar-logo {
+      width: 300px; } }
+  @media (min-width: 1024px) {
+    .topbar-logo {
+      width: 315px; } }

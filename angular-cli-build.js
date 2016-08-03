@@ -13,7 +13,7 @@ module.exports = function(defaults) {
       'systemjs/dist/system.src.js',
       'zone.js/dist/**/*.+(js|js.map)',
       'es6-shim/es6-shim.js',
-      'reflect-metadata/**/*.+(ts|js|js.map)',
+      'reflect-metadata/**/*.+(js|js.map)',
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)'
     ]

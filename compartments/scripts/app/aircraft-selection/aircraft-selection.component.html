@@ -1,0 +1,41 @@
+<div class="choose-aircraft">
+  <div class="text-container">
+    <p class="gray-text">AirshipCMS allows you to host and manage content for projects of any size.</p>
+    <p class="gray-text">What kind of projects do you want to build?</p>
+  </div>
+  <div class="aircraft-container clearfix">
+    <div class="aircraft" [ngClass]="getPaperplaneClass()" (click)="checkAircraft('paperplane')">
+      <div class="graphic-container">
+        <div class="checkbox"></div>
+        <div class="checkmark"></div>
+        <img src="/assets/styles/assets/paper-plane-graphic.svg" alt="">
+      </div>
+      <p class="aircraft-type">Paper Plane</p>
+      <p class="project-goal">I want to build a blog or website with a few pages</p>
+    </div>
+    <div class="aircraft" [ngClass]="getAirshipClass()" (click)="checkAircraft('airship')">
+      <div class="graphic-container">
+        <div class="checkbox"></div>
+        <div class="checkmark"></div>
+        <img src="/assets/styles/assets/airship-graphic.svg" alt="">
+      </div>
+      <p class="aircraft-type">Airship</p>
+      <p class="project-goal">I want to build a large website with many pages, collections, or products</p>
+    </div>
+    <div class="aircraft" [ngClass]="getSpaceshipClass()" (click)="checkAircraft('spaceship')">
+      <div class="graphic-container">
+        <div class="checkbox"></div>
+        <div class="checkmark"></div>
+        <img src="/assets/styles/assets/spaceship-graphic.svg" alt="">
+      </div>
+      <p class="aircraft-type">Spaceship</p>
+      <p class="project-goal">I want to use Airship as a CMS for my custom web application.</p>
+    </div>
+  </div>
+  <div class="button-container">
+    <a routerLink="/thank-you"><button [ngClass]="enableSubmit()" [disabled]="!(paperplaneCicked === true || airshipClicked === true || spaceshipClicked === true)">Submit</button></a>
+  </div>
+  <div class="link-container">
+    <a class="skip-link" routerLink="/thank-you">Skip</a>
+  </div>
+</div>
